@@ -1,0 +1,58 @@
+body{
+    margin:0;
+    background-image: linear-gradient(to top, #1c0342 0%, #1b0340 100%);
+    /*overflow-y:hidden;*/
+}
+.animation{
+    width:70vw;
+    height: 80vh;
+    margin: 5rem auto;
+    background-image: url("../img/sky1.jpg");
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    box-shadow:rgb(13 226 59 / 92%) 20px 19px 35px -12px;
+}
+
+.plain{
+    transition: all 7s ease-in-out 2s;
+    position: absolute;
+    bottom:50%;
+    left:45%;
+    animation: plain 5s cubic-bezier(0, 0, 0.21, 0.93) infinite;   
+}
+.prince{
+    transition: all 7s ease-in-out 2s;
+    position: absolute;
+    bottom:10%;
+    left:15%;
+    animation: prince 5s cubic-bezier(0, 0, 0.21, 0.93) infinite;   
+}
+
+@keyframes plain {
+  0%{
+      bottom:  0;
+      transform: translateX(0);
+  }
+  50%{
+      bottom:  50%;
+      transform: translateX(-10%);
+  }
+  100%{
+      bottom:  100%;
+      transform: translateX(-200%);
+  }
+}
+
+@keyframes prince{
+   100%{
+      transform: translateX(-10px);
+  }
+  50%{
+      transform: translateX(20px);
+  }
+  0%{
+      transform: translateX(-10px);
+  }
+}
+
